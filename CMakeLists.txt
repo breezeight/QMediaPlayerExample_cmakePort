@@ -30,8 +30,8 @@ SET( Qt4_RES
 
 #Cmake macro 
 QT4_WRAP_CPP(MOC_CPP ${Qt4_HEADERS})
-QT4_WRAP_UI(UI_CPP ${Qt4_UI})
-QT4_ADD_RESOURCES(RES_H ${Qt4_RES})
+QT4_WRAP_UI(UI_HEADERS ${Qt4_UI})
+QT4_ADD_RESOURCES(RES_CPP ${Qt4_RES})
 
 
 #With this line, all intermediary files will be available in the include path.
@@ -75,8 +75,8 @@ SET( SRC
 	main.cpp
 	mediaplayer.cpp
 	${MOC_CPP}
-	${UI_CPP}
-	${RES_H}
+	${UI_HEADERS} #Added here only to add a dependency between the TARGET and the ui compilation
+	${RES_CPP}
 )
  
 SET( LIB
