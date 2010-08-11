@@ -71,8 +71,6 @@ SET(CMAKE_BUILD_TYPE Release)
 
 SET(CMAKE_CXX_FLAGS "-Wall")
 
-#INCLUDE_DIRECTORIES( . )
-
 SET( SRC
 	main.cpp
 	mediaplayer.cpp
